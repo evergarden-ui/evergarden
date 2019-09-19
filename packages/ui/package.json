@@ -1,0 +1,14 @@
+{
+  "name": "@evergarden/ui",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "color": "^3.1.2",
+    "emotion": "^10.0.17",
+    "nano-assign": "^1.0.1",
+    "styled-system": "^5.1.2"
+  },
+  "license": "MIT"
+}

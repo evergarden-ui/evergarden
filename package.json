@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "evergarden",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "example": "node scripts/run-example"
+  },
+  "devDependencies": {
+    "poi": "^12.7.2",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
