@@ -11,10 +11,7 @@ new Vue({
   render(h) {
     return h(Button, {
       attrs: {
-        css: {
-          color: 'white',
-          bg: 'twitter.400'
-        }
+        variantColor: 'green'
       }
     }, ['hello'])
   }

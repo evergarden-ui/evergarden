@@ -226,6 +226,8 @@ const variantProps = props => {
 ////////////////////////////////////////////////////////////
 
 const baseProps = {
+  borderRadius: 'md',
+  fontWeight: 'semibold',
   display: 'inline-flex',
   appearance: 'none',
   alignItems: 'center',
@@ -236,7 +238,9 @@ const baseProps = {
   whiteSpace: 'nowrap',
   verticalAlign: 'middle',
   lineHeight: '1.2',
-  outline: 'none'
+  outline: 'none',
+  cursor: 'pointer',
+  border: 'none'
 }
 
 ////////////////////////////////////////////////////////////

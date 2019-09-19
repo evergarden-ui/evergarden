@@ -1,26 +1,50 @@
 import { Box } from '../Box'
 import { createStyles } from './styles'
 
+const getProps = props =>
+  Object.keys(props).reduce((res, name) => {
+    if (props[name] !== undefined) {
+      res[name] = props[name]
+    }
+    return res
+  }, {})
+
 export const Button = {
   name: 'EverButton',
-  props: Box.props,
-  render(h) {
-    const props = {
-      ...this.$props,
-      as: this.$props.as || 'button'
+  props: {
+    variant: {
+      type: String,
+      default: 'solid'
+    },
+    variantColor: {
+      type: String,
+      default: 'gray'
+    },
+    size: {
+      type: [String, Number],
+      default: 'md'
+    },
+    as: {
+      type: String,
+      default: 'button'
     }
-    props.css = {
-      borderRadius: 'md',
+  },
+
+  render(h) {
+    const childAttrs = {
       ...createStyles({
-        ...props.css,
-        theme: this.$evergarden.theme,
-        colorMode: this.$evergarden.colorMode
-      })
+        variant: this.variant,
+        color: this.variantColor,
+        size: this.size,
+        ...this.$evergarden
+      }),
+      ...this.$attrs,
+      as: this.as
     }
     return h(
       Box,
       {
-        props
+        attrs: childAttrs
       },
       this.$slots.default
     )
