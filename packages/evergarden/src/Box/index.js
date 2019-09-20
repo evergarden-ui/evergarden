@@ -1,6 +1,5 @@
 import { css } from 'emotion'
 import { systemProps } from './config'
-import assign from 'nano-assign'
 
 const allPropNames = systemProps.propNames.concat([
   'as',

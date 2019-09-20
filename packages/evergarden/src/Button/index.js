@@ -1,13 +1,5 @@
-import { Box } from '../Box'
+import { Box } from '../Box/index'
 import { createStyles } from './styles'
-
-const getProps = props =>
-  Object.keys(props).reduce((res, name) => {
-    if (props[name] !== undefined) {
-      res[name] = props[name]
-    }
-    return res
-  }, {})
 
 export const Button = {
   name: 'EverButton',

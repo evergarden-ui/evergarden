@@ -1,7 +1,7 @@
-import { theme } from './theme'
+import { theme } from './theme/index'
 
-export { Box } from './Box'
-export { Button } from './Button'
+export { Box } from './Box/index'
+export { Button } from './Button/index'
 
 export { theme }
 
