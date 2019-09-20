@@ -80,4 +80,13 @@ export default demoboard => {
         }
       })
     })
+    .add('events', {
+      component: toReact({
+        render(h) {
+          return <ButtonGroup>
+            <Button onClick={() => alert('hello')}>Click Me!</Button>
+          </ButtonGroup>
+        }
+      })
+    })
 }

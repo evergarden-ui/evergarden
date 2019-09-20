@@ -8,10 +8,10 @@ export default demoboard => {
       component: toReact({
         render(h) {
           return (
-            <ButtonGroup>
-              <Button variantColor="teal">Button</Button>
-              <Button variantColor="teal">Button</Button>
-              <Button variantColor="teal">Button</Button>
+            <ButtonGroup variantColor="teal">
+              <Button>Button</Button>
+              <Button variantColor="green">Button</Button>
+              <Button>Button</Button>
             </ButtonGroup>
           )
         }
