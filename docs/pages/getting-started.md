@@ -3,7 +3,7 @@ title: Getting Started
 layout: docs
 ---
 
-Install Evergarden using npm
+Install Evergarden using npm:
 
 ```bash
 npm install evergarden
