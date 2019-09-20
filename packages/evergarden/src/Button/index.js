@@ -3,6 +3,9 @@ import { createStyles } from './styles'
 
 export const Button = {
   name: 'EverButton',
+
+  inheritAttrs: false,
+  
   props: {
     variant: {
       type: String,

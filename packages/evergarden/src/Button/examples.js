@@ -1,5 +1,5 @@
 import toReact from '@egoist/vue-to-react'
-import { Box, Button } from 'evergarden'
+import { Box, Button, ButtonGroup } from 'evergarden'
 
 export default demoboard => {
   demoboard
@@ -8,7 +8,7 @@ export default demoboard => {
       component: toReact({
         render(h) {
           return (
-            <Box my={30} spacing={10}>
+            <ButtonGroup>
               <Button variantColor="green">Button</Button>
 
               <Button variantColor="red">Button</Button>
@@ -20,11 +20,12 @@ export default demoboard => {
               <Button
                 variantColor="blue"
                 color="gray.300"
+                borderRadius="lg"
                 _hover={{ color: 'gray.700' }}
               >
-                Button
+                Compose
               </Button>
-            </Box>
+            </ButtonGroup>
           )
         }
       })
@@ -33,7 +34,7 @@ export default demoboard => {
       component: toReact({
         render(h) {
           return (
-            <Box my={30}>
+            <ButtonGroup>
               <Button variantColor="green" variant="solid">
                 Button
               </Button>
@@ -49,11 +50,7 @@ export default demoboard => {
               <Button variantColor="green" variant="link">
                 Button
               </Button>
-
-              <Button variantColor="green" variant="unstyled">
-                Button
-              </Button>
-            </Box>
+            </ButtonGroup>
           )
         }
       })
@@ -62,7 +59,7 @@ export default demoboard => {
       component: toReact({
         render(h) {
           return (
-            <Box my={30}>
+            <ButtonGroup>
               <Button variantColor="green" size="xs">
                 Button
               </Button>
@@ -78,7 +75,7 @@ export default demoboard => {
               <Button variantColor="green" size="lg">
                 Button
               </Button>
-            </Box>
+            </ButtonGroup>
           )
         }
       })
