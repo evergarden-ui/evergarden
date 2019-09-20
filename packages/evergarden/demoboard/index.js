@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import { create, mount } from 'demoboard'
-import toReact from '@egoist/vue-to-react'
 import { Evergarden } from 'evergarden'
 import './global.css'
 
