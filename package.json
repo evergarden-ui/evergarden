@@ -6,19 +6,13 @@
   ],
   "scripts": {
     "example": "node scripts/run-example",
-    "demo": "poi -s --config demoboard/poi.config.js",
-    "demo:build": "poi --prod --config demoboard/poi.config.js"
+    "demo": "poi -s --config packages/evergarden/demoboard/poi.config.js",
+    "demo:build": "poi --prod --config packages/evergarden/demoboard/poi.config.js"
   },
   "devDependencies": {
-    "@egoist/vue-to-react": "^1.1.0",
-    "demoboard": "^0.4.1",
-    "github-markdown-css": "^3.0.1",
     "poi": "^12.7.2",
-    "prismjs": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "vmark": "^1.2.0",
-    "vmark-loader": "^1.0.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   }
