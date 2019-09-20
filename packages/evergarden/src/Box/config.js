@@ -154,3 +154,29 @@ export const systemProps = compose(
   flexbox,
   system(config)
 )
+
+export const pseudoConfig = {
+  hover: '&:hover',
+  active: '&:active, &[data-active=true]',
+  focus: '&:focus',
+  visited: '&:visited',
+  even: '&:nth-of-type(even)',
+  odd: '&:nth-of-type(odd)',
+  disabled:
+    '&:disabled, &:disabled:focus, &:disabled:hover, &[aria-disabled=true], &[aria-disabled=true]:focus, &[aria-disabled=true]:hover',
+  checked: '&[aria-checked=true]',
+  mixed: '&[aria-checked=mixed]',
+  selected: '&[aria-selected=true]',
+  invalid: '&[aria-invalid=true]',
+  pressed: '&[aria-pressed=true]',
+  readOnly: '&[aria-readonly=true], &[readonly]',
+  first: '&:first-of-type',
+  last: '&:last-of-type',
+  expanded: '&[aria-expanded=true]',
+  grabbed: '&[aria-grabbed=true]',
+  notFirst: '&:not(:first-of-type)',
+  notLast: '&:not(:last-of-type)',
+  groupHover: '[role=group]:hover &'
+}
+
+export const pseudoNames = Object.keys(pseudoConfig)

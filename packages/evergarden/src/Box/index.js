@@ -1,15 +1,13 @@
 import { css } from 'emotion'
-import { systemProps } from './config'
+import { systemProps, pseudoConfig, pseudoNames } from './config'
 
-const allPropNames = systemProps.propNames.concat([
+const allPropNames = [
+  ...systemProps.propNames,
   'as',
   'variantColor',
   'variant',
-  '_focus',
-  '_hover',
-  '_disabled',
-  '_active'
-])
+  ...pseudoNames.map(name => `_${name}`)
+]
 
 export const Box = {
   name: 'EverBox',
@@ -30,28 +28,29 @@ export const Box = {
     const baseProps = {
       theme: this.$evergarden.theme
     }
-    const pseudo = type => ({
-      [`&:${type}`]: props[`_${type}`] && systemProps({
-        ...baseProps,
-        ...props[`_${type}`]
-      })
-    })
+    const pseudo = name => {
+      const selector = pseudoConfig[name]
+      return {
+        [selector]:
+          props[`_${name}`] &&
+          systemProps({
+            ...baseProps,
+            ...props[`_${name}`]
+          })
+      }
+    }
     return h(
       props.as || 'div',
       {
         on: this.$listeners,
         attrs,
         class: [
-          css(
-            [
+          css([
             systemProps({
               ...baseProps,
               ...props
             }),
-            pseudo('focus'),
-            pseudo('hover'),
-            pseudo('active'),
-            pseudo('disabled'),
+            ...pseudoNames.map(name => pseudo(name))
           ])
         ]
       },
