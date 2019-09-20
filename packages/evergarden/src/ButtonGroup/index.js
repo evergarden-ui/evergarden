@@ -1,5 +1,5 @@
 import { Box } from '../Box/index'
-import { getChildren } from '../utils'
+import { getChildren, modifyChild } from '../utils'
 
 export const ButtonGroup = {
   name: 'ButtonGroup',
@@ -13,6 +13,15 @@ export const ButtonGroup = {
     },
     isAttached: {
       type: Boolean
+    },
+    size: {
+      type: String
+    },
+    variant: {
+      type: String
+    },
+    variantColor: {
+      type: String
     }
   },
 
@@ -30,7 +39,11 @@ export const ButtonGroup = {
       children.map((child, index) => {
         const isFirst = index === 0
         const isLast = index === children.length - 1
-        Object.assign(child.data.attrs, {
+        modifyChild(child.data.attrs, {
+          size: this.size || child.data.attrs.size,
+          variant: this.variant || child.data.attrs.variant,
+          variantColor: this.variantColor || child.data.attrs.variantColor,
+          _focus: { boxShadow: 'outline', zIndex: 1 },
           ...(!isLast && !this.isAttached && { mr: this.spacing }),
           ...(isFirst && this.isAttached && { roundedRight: 0 }),
           ...(isLast && this.isAttached && { roundedLeft: 0 }),

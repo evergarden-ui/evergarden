@@ -33,8 +33,14 @@ export const Button = {
         size: this.size,
         ...this.$evergarden
       }),
-      ...this.$attrs,
-      as: this.as
+      as: this.as,
+    }
+    for (const key of Object.keys(this.$attrs)) {
+      if (key[0] === '_' && childAttrs[key]) {
+        Object.assign(childAttrs[key], this.$attrs[key])
+      } else {
+        childAttrs[key] = this.$attrs[key]
+      }
     }
     return h(
       Box,
