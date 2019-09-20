@@ -32,19 +32,19 @@ export const Box = {
       theme: this.$evergarden.theme
     }
     const pseudo = type => ({
-      [`&:${type}`]: props[`_${type}`] && css(
-        systemProps({
-          ...baseProps,
-          ...props[`_${type}`]
-        })
-      )
+      [`&:${type}`]: props[`_${type}`] && systemProps({
+        ...baseProps,
+        ...props[`_${type}`]
+      })
     })
     return h(
       props.as || 'div',
       {
+        on: this.$listeners,
         attrs,
         class: [
-          css([
+          css(
+            [
             systemProps({
               ...baseProps,
               ...props

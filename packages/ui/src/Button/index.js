@@ -44,7 +44,8 @@ export const Button = {
     return h(
       Box,
       {
-        attrs: childAttrs
+        attrs: childAttrs,
+        on: this.$listeners
       },
       this.$slots.default
     )
