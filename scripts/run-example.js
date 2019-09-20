@@ -7,6 +7,6 @@ if (!example) {
   process.exit(1)
 }
 
-spawnSync('yarn', ['poi', '-s', `packages/ui/src/${example}/example.js`], {
+spawnSync('yarn', ['poi', '-s', `packages/evergarden/src/${example}/example.js`], {
   stdio: 'inherit'
 })
