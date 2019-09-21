@@ -1,11 +1,10 @@
-import toReact from '@egoist/vue-to-react'
 import { Button, ButtonGroup } from 'evergarden'
 
 export default demoboard => {
   demoboard
     .section('ButtonGroup')
     .add('default', {
-      component: toReact({
+      component: {
         render(h) {
           return (
             <ButtonGroup variantColor="teal">
@@ -15,10 +14,10 @@ export default demoboard => {
             </ButtonGroup>
           )
         }
-      })
+      }
     })
     .add('isAttached', {
-      component: toReact({
+      component: {
         render(h) {
           return (
             <ButtonGroup isAttached={true}>
@@ -28,6 +27,6 @@ export default demoboard => {
             </ButtonGroup>
           )
         }
-      })
+      }
     })
 }

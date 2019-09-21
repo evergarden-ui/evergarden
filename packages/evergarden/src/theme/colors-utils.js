@@ -1,4 +1,4 @@
-import { css } from 'emotion'
+import { css } from '@evergarden/emotion'
 import Color from 'color'
 
 export const get = (color, hue) => `${color}.${hue}`

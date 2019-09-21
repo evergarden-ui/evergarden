@@ -1,11 +1,10 @@
-import toReact from '@egoist/vue-to-react'
 import { Button, ButtonGroup } from 'evergarden'
 
 export default demoboard => {
   demoboard
     .section('Button')
     .add('colors', {
-      component: toReact({
+      component: {
         render(h) {
           return (
             <ButtonGroup>
@@ -28,10 +27,10 @@ export default demoboard => {
             </ButtonGroup>
           )
         }
-      })
+      }
     })
     .add('variants', {
-      component: toReact({
+      component: {
         render(h) {
           return (
             <ButtonGroup>
@@ -53,10 +52,10 @@ export default demoboard => {
             </ButtonGroup>
           )
         }
-      })
+      }
     })
     .add('sizes', {
-      component: toReact({
+      component: {
         render(h) {
           return (
             <ButtonGroup>
@@ -78,15 +77,17 @@ export default demoboard => {
             </ButtonGroup>
           )
         }
-      })
+      }
     })
     .add('events', {
-      component: toReact({
+      component: {
         render(h) {
-          return <ButtonGroup>
-            <Button onClick={() => alert('hello')}>Click Me!</Button>
-          </ButtonGroup>
+          return (
+            <ButtonGroup>
+              <Button onClick={() => alert('hello')}>Click Me!</Button>
+            </ButtonGroup>
+          )
         }
-      })
+      }
     })
 }

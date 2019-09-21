@@ -1,9 +1,8 @@
-import toReact from '@egoist/vue-to-react'
 import { Box, Input } from 'evergarden'
 
 export default demoboard => {
   demoboard.section('Input').add('variants', {
-    component: toReact({
+    component: {
       render(h) {
         return <Box>
           <Input placeholder="Basic usage" />
@@ -11,6 +10,6 @@ export default demoboard => {
           <Input variant="filled" placeholder="Basic usage" />
         </Box>
       }
-    })
+    }
   })
 }

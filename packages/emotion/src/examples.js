@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { styled } from './'
+import { styled, Global, css } from './'
 
 new Vue({
   el: '#app',
@@ -10,6 +10,13 @@ new Vue({
       padding: 8px 12px;
     `
     return h('div',{}, [
+      h(Global, {
+        props: {
+          styles: [css`
+          body { background-color: red; }
+          `]
+        }
+      }),
       h(PinkButton, {class: 'foo'}, ['Button'])
     ])
   }

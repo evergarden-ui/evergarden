@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@egoist/vue-to-react": "^1.1.0",
-    "demoboard": "^0.4.1",
+    "demoboard": "^0.5.0",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

@@ -11,12 +11,16 @@
     "build": "bili src/index.js --format esm --format cjs --minimal",
     "prepublishOnly": "npm run build"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@emotion/cache": "^10.0.19",
+    "@emotion/css": "^10.0.14",
     "@emotion/serialize": "^0.11.11",
+    "@emotion/sheet": "^0.9.3",
     "@emotion/utils": "^0.11.2",
-    "emotion": "^10.0.17"
+    "clsx": "^1.0.4"
   },
   "devDependencies": {
     "bili": "^4.8.1"

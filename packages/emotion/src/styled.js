@@ -1,11 +1,7 @@
-import { cx } from 'emotion'
+import clsx from 'clsx'
 import { getRegisteredStyles, insertStyles } from '@emotion/utils'
-import createCache from '@emotion/cache'
 import { serializeStyles } from '@emotion/serialize'
-
-const cache = createCache()
-
-const IS_BROWSER = typeof window !== 'undefined'
+import { cache, IS_BROWSER } from './shared'
 
 const ILLEGAL_ESCAPE_SEQUENCE_ERROR =
   process.env.NODE_ENV === 'production'
@@ -15,7 +11,7 @@ Because you write your CSS inside a JavaScript string you actually have to do do
 You can read more about this here:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences`
 
-const createStyled = (tag, options) => {
+const createStyled = (tag, options = {}) => {
   if (process.env.NODE_ENV !== 'production') {
     if (tag === undefined) {
       throw new Error(
@@ -23,12 +19,9 @@ const createStyled = (tag, options) => {
       )
     }
   }
-  let identifierName
-  let targetClassName
-  if (options !== undefined) {
-    identifierName = options.label
-    targetClassName = options.target
-  }
+  let identifierName = options.label
+  let targetClassName = options.target
+
   const isReal = tag.__emotion_real === tag
   const baseTag = (isReal && tag.__emotion_base) || tag
 
@@ -74,7 +67,7 @@ const createStyled = (tag, options) => {
           className += getRegisteredStyles(
             cache.registered,
             classInterpolations,
-            cx(data.class)
+            clsx(data.class)
           )
         }
 
