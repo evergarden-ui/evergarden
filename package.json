@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "yarn workspaces run build",
     "demo": "poi -s --config packages/evergarden/demoboard/poi.config.js",
     "demo:build": "poi --prod --config packages/evergarden/demoboard/poi.config.js"
   },
