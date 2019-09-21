@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "yarn workspaces run build"
+    "prepare": "yarn workspaces run build"，
+    "storybook": "yarn workspace evergarden run storybook"
   }
 }
