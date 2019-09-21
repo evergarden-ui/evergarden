@@ -8,10 +8,10 @@
 yarn
 ```
 
-## Run the demo
+## Run Storybook
 
 ```bash
-yarn demo
+yarn storybook
 ```
 
 ## Folder Structure
@@ -21,7 +21,7 @@ yarn demo
   - evergarden/
     - src/
       - Button/
-        - examples.js  # Demoboard example
+        - examples.js  # Storybook examples
         - index.js     # Component entry
         - styles.js    # Component styles, if any
       - ...
