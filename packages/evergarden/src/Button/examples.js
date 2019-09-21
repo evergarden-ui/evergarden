@@ -1,4 +1,5 @@
 import { Button, ButtonGroup } from 'evergarden'
+import { action } from '@storybook/addon-actions'
 
 export default { title: 'Button' }
 
@@ -79,7 +80,7 @@ export const events = () => ({
   render(h) {
     return (
       <ButtonGroup>
-        <Button onClick={() => alert('hello')}>Click Me!</Button>
+        <Button onClick={action('hello')}>Click Me!</Button>
       </ButtonGroup>
     )
   }
