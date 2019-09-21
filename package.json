@@ -5,13 +5,6 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "yarn workspaces run build",
-    "demo": "poi -s --config packages/evergarden/demoboard/poi.config.js",
-    "demo:build": "poi --prod --config packages/evergarden/demoboard/poi.config.js"
-  },
-  "devDependencies": {
-    "poi": "^12.7.2",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "prepare": "yarn workspaces run build"
   }
 }
