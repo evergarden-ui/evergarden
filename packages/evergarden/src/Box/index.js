@@ -20,7 +20,7 @@ export const Box = styled('div', { getAttrs })(systemProps, props => {
   for (const key of Object.keys(props)) {
     const trimKey = key.slice(1)
     if (pseudoNames.indexOf(trimKey) > -1) {
-      obj[`&:${trimKey}`] = props[key]
+      obj[pseudoConfig[trimKey]] = props[key]
     }
   }
   return css(obj)
