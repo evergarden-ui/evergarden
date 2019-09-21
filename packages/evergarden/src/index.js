@@ -3,6 +3,7 @@ import { theme } from './theme/index'
 export { Box } from './Box/index'
 export { Button } from './Button/index'
 export { ButtonGroup } from './ButtonGroup/index'
+export { Input } from './Input/index'
 
 export { theme }
 

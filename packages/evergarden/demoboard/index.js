@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { create, mount } from 'demoboard'
 import { Evergarden } from 'evergarden'
+import 'normalize.css/normalize.css'
 import './global.css'
 
 const demoboard = create()

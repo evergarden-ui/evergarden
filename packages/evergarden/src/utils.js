@@ -22,3 +22,19 @@ export const merge = (obj, ...args) => {
 export const defined = (a, b) => {
   return a === undefined ? b : a
 }
+
+export const mergeAttrs = (base, attrs) => {
+  for (const key of Object.keys(attrs)) {
+    if (key[0] === '_' && base[key]) {
+      merge(base[key], attrs[key])
+    } else {
+      base[key] = attrs[key]
+    }
+  }
+}
+
+
+export const getColor = (colors, key, defaultColorModifier = 500) => {
+  const [name, colorModifier = defaultColorModifier] = key.split('.')
+  return colors[name] && colors[name][colorModifier]
+}

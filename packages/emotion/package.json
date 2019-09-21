@@ -1,0 +1,24 @@
+{
+  "name": "@evergarden/emotion",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm",
+  "scripts": {
+    "build": "bili src/index.js --format esm --format cjs --minimal",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "dependencies": {
+    "@emotion/cache": "^10.0.19",
+    "@emotion/serialize": "^0.11.11",
+    "@emotion/utils": "^0.11.2",
+    "emotion": "^10.0.17"
+  },
+  "devDependencies": {
+    "bili": "^4.8.1"
+  }
+}

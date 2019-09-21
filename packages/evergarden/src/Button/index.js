@@ -1,11 +1,12 @@
 import { Box } from '../Box/index'
 import { createStyles } from './styles'
+import { mergeAttrs } from '../utils'
 
 export const Button = {
   name: 'EverButton',
 
   inheritAttrs: false,
-  
+
   props: {
     variant: {
       type: String,
@@ -33,15 +34,9 @@ export const Button = {
         size: this.size,
         ...this.$evergarden
       }),
-      as: this.as,
+      as: this.as
     }
-    for (const key of Object.keys(this.$attrs)) {
-      if (key[0] === '_' && childAttrs[key]) {
-        Object.assign(childAttrs[key], this.$attrs[key])
-      } else {
-        childAttrs[key] = this.$attrs[key]
-      }
-    }
+    mergeAttrs(childAttrs, this.$attrs)
     return h(
       Box,
       {
