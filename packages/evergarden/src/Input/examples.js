@@ -1,15 +1,15 @@
-import { Box, Input } from 'evergarden'
+import { Input, Stack } from 'evergarden'
 
 export default { title: 'Input' }
 
 export const variants = () => ({
   render(h) {
     return (
-      <Box>
-        <Input placeholder="Basic usage" />
-        <Input variant="flushed" placeholder="Basic usage" />
-        <Input variant="filled" placeholder="Basic usage" />
-      </Box>
+      <Stack>
+        <Input placeholder="Outline" />
+        <Input variant="filled" placeholder="Filled" />
+        <Input variant="flushed" placeholder="Flushed" />
+      </Stack>
     )
   }
 })

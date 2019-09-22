@@ -1,6 +1,5 @@
-export const getChildren = items => {
-  return items.filter(item => item.componentOptions)
-}
+export const getChildren = items =>
+  items ? items.filter(item => item.componentOptions) : []
 
 export const merge = (obj, ...args) => {
   for (let i = 0; i < args.length; i++) {
@@ -16,8 +15,8 @@ export const merge = (obj, ...args) => {
 
 /**
  * Return the left-land value if it's not `undefined`
- * @param {any} a 
- * @param {any} b 
+ * @param {any} a
+ * @param {any} b
  */
 export const defined = (a, b) => {
   return a === undefined ? b : a
@@ -32,7 +31,6 @@ export const mergeAttrs = (base, attrs) => {
     }
   }
 }
-
 
 export const getColor = (colors, key, defaultColorModifier = 500) => {
   const [name, colorModifier = defaultColorModifier] = key.split('.')

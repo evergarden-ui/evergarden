@@ -1,10 +1,11 @@
 import { theme } from './theme/index'
 
+export { CSSReset } from './CSSReset/index'
 export { Box } from './Box/index'
 export { Button } from './Button/index'
 export { ButtonGroup } from './ButtonGroup/index'
 export { Input } from './Input/index'
-export { CSSReset } from './CSSReset/index'
+export { Stack } from './Stack/index'
 
 export { theme }
 
