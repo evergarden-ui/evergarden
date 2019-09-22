@@ -19,7 +19,11 @@ export const Stack = {
     return h(
       Box,
       {
-        attrs: this.$attrs,
+        attrs: {
+          display: 'flex',
+          flexDirection: this.isInline ? 'row' : 'column',
+          ...this.$attrs
+        },
         on: this.$listeners
       },
       children.map((child, index) => {
