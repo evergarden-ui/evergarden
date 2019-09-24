@@ -27,7 +27,6 @@ export const Link = {
         ...this.$props,
         ...this.$evergarden
       }),
-      disabled: this.isDisabled,
       'aria-disabled': this.isDisabled,
       target: this.isExternal ? '_blank' : undefined,
       as: this.as
