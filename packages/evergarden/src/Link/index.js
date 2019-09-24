@@ -22,13 +22,18 @@ export const Link = {
   },
 
   render(h) {
+    const externalAttrs = {
+      target: this.isExternal ? '_blank' : undefined,
+      rel: this.isExternal ? 'nofollow noopener noreferrer' : undefined,
+    }
+
     const childAttrs = {
       ...createStyles({
         ...this.$props,
         ...this.$evergarden
       }),
+      ...externalAttrs,
       'aria-disabled': this.isDisabled,
-      target: this.isExternal ? '_blank' : undefined,
       as: this.as
     }
 
