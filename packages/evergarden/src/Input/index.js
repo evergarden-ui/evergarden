@@ -52,12 +52,12 @@ export const Input = {
         ...this.$props,
         ...this.$evergarden
       }),
-      readOnly: this.isReadOnly,
-      ariaReadonly: this.isReadOnly,
+      readonly: this.isReadOnly,
+      'aria-readonly': this.isReadOnly,
       disabled: this.isDisabled,
-      ariaInvalid: this.isInvalid,
+      'aria-invalid': this.isInvalid,
       require: this.isRequired,
-      ariaRequire: this.isRequire,
+      'aria-required': this.isRequired,
       as: this.as
     }
 

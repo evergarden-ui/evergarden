@@ -43,6 +43,7 @@ export const CSSReset = {
           border-width: 0;
           border-style: solid;
           border-color: ${borderColor};
+          box-sizing: border-box;
         }
         input:-ms-input-placeholder,
         textarea:-ms-input-placeholder {

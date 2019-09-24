@@ -10,7 +10,7 @@ const outlinedStyle = ({
   const borderColor = { light: 'inherit', dark: 'whiteAlpha.50' }
   const hoverColor = { light: 'gray.300', dark: 'whiteAlpha.200' }
 
-  const boxShadow = getColor(colors, focusBorderColor)
+  const focusBoxShadow = getColor(colors, focusBorderColor)
 
   const invalidColor = { light: 'red.500', dark: 'red.300' }
   const invalidBoxShadow = { light: errorBorderColor, dark: errorBorderColor }
@@ -29,11 +29,11 @@ const outlinedStyle = ({
     },
     _focus: {
       borderColor: focusBorderColor,
-      boxShadow: `0 0 0 1px ${boxShadow}`
+      boxShadow: `0 0 0 1px ${focusBoxShadow}`
     },
     _invalid: {
       borderColor: invalidColor[colorMode],
-      boxShadow: `0 0 0 1px ${invalidBoxShadow[colorMode]}`
+      boxShadow: `0 0 0 1px ${getColor(colors, invalidBoxShadow[colorMode])}`
     }
   }
 }
