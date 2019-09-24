@@ -4,21 +4,23 @@ const disabledProps = {
   _disabled: {
     opacity: '0.4',
     pointerEvents: 'none',
-    cursor: 'not-allowed'
+    cursor: 'not-allowed',
+    textDecoration: 'none',
   }
 }
 
 const baseProps = {
   cursor: 'pointer',
   color: '#000',
+  textDecoration: 'none',
   _hover: {
-    textDecoration: 'underline',
+    textDecoration: 'underline'
   }
 }
 
 export const createStyles = props => {
   return {
     ...baseProps,
-    ...disabledProps,
+    ...disabledProps
   }
 }
