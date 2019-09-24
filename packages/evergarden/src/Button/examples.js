@@ -85,3 +85,13 @@ export const events = () => ({
     )
   }
 })
+
+export const states = () => ({
+  render(h) {
+    return (
+      <ButtonGroup>
+        <Button isDisabled={true}>Disabled</Button>
+      </ButtonGroup>
+    )
+  }
+})
