@@ -8,6 +8,7 @@ export { ButtonGroup } from './ButtonGroup/index'
 export { Input } from './Input/index'
 export { InputGroup } from './InputGroup/index'
 export { InputElement } from './InputElement/index'
+export { Icon } from './Icon/index'
 
 export { theme }
 

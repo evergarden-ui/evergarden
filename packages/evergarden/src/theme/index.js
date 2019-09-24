@@ -1,3 +1,4 @@
+import { icons } from '../icons'
 import { colors } from './colors'
 import { sizes, baseSizes } from './sizes'
 import { typography } from './typography'
@@ -81,5 +82,6 @@ export const theme = {
   ...typography,
   sizes,
   shadows,
-  space
+  space,
+  icons
 }

@@ -2,6 +2,8 @@ import { Box } from '../Box/index'
 import { getChildren, merge } from '../utils'
 
 export const Stack = {
+  name: 'EverStack',
+  
   props: {
     isInline: {
       type: Boolean
@@ -28,11 +30,11 @@ export const Stack = {
       },
       children.map((child, index) => {
         const isLast = index === children.length - 1
+        console.log('xx', child)
         const spacingProps = this.isInline
           ? { mr: isLast ? undefined : this.spacing }
           : { mb: isLast ? undefined : this.spacing }
-        child.data.attrs = child.data.attrs || {}
-        merge(child.data.attrs, spacingProps)
+         child.data.attrs = merge({}, child.data.attrs, spacingProps)
         return child
       })
     )

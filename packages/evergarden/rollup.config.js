@@ -3,19 +3,14 @@ import path from 'path'
 const createConfig = ({ format }) => {
   /** @type {import('rollup').RollupOptions} */
   const config = {
-    input: ['src/index.js'],
+    input: ['src/index.js', 'src/icons.js'],
     output: {
       dir: path.join(__dirname, 'dist', format),
       format
     },
     plugins: [
-      require('rollup-plugin-buble')({
-        objectAssign: 'Object.assign',
-        transforms: {
-          dangerousForOf: true,
-          templateString: false,
-          dangerousTaggedTemplateString: true
-        }
+      require('rollup-plugin-babel')({
+        exclude: 'node_modules/**'
       })
     ]
   }

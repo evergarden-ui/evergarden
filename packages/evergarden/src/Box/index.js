@@ -15,7 +15,7 @@ const getAttrs = attrs =>
     return res
   }, {})
 
-export const Box = styled('div', { getAttrs })(systemProps, props => {
+const Box = styled('div', { getAttrs })(systemProps, props => {
   const obj = {}
   for (const key of Object.keys(props)) {
     const trimKey = key.slice(1)
@@ -25,3 +25,7 @@ export const Box = styled('div', { getAttrs })(systemProps, props => {
   }
   return css(obj)
 })
+
+Box.name = 'EverBox'
+
+export { Box }
