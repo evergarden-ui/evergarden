@@ -10,6 +10,7 @@ export { Input } from './Input/index'
 export { InputGroup } from './InputGroup/index'
 export { InputElement } from './InputElement/index'
 export { Icon } from './Icon/index'
+export { Link } from './Link/index'
 
 export { theme }
 
