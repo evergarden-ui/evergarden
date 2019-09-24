@@ -1,4 +1,4 @@
-import { Box } from '../Box'
+import { Box } from '../Box/index'
 import { getChildren, merge } from '../utils'
 
 export const Stack = {
