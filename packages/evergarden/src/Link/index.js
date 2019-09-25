@@ -11,7 +11,7 @@ const baseStyles = {
     opacity: '0.4',
     pointerEvents: 'none',
     cursor: 'not-allowed',
-    textDecoration: 'none',
+    textDecoration: 'none'
   }
 }
 
@@ -31,14 +31,16 @@ export const Link = {
     },
     isDisabled: {
       type: Boolean
-    },
+    }
   },
 
   render(h) {
-    const externalAttrs = this.isExternal ? {
-      target: '_blank',
-      rel: 'noopener noreferrer'
-    } : undefined
+    const externalAttrs = this.isExternal
+      ? {
+          target: '_blank',
+          rel: 'noopener noreferrer'
+        }
+      : undefined
 
     const childAttrs = {
       ...baseStyles,
@@ -53,7 +55,10 @@ export const Link = {
       Box,
       {
         attrs: childAttrs,
-        on: this.$listeners
+        on: {
+          click: this.isDisabled ? e => e.preventDefault() : undefined,
+          ...this.$listeners
+        }
       },
       this.$slots.default
     )
