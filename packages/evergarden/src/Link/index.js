@@ -45,6 +45,7 @@ export const Link = {
     const childAttrs = {
       ...baseStyles,
       ...externalAttrs,
+      'tab-index': this.isDisabled ? -1 : undefined,
       'aria-disabled': this.isDisabled,
       as: this.as
     }
