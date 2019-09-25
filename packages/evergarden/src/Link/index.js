@@ -1,6 +1,19 @@
 import { mergeAttrs } from '../utils'
-import { createStyles } from './styles'
 import { Box } from '../Box/index'
+
+const baseStyles = {
+  cursor: 'pointer',
+  textDecoration: 'none',
+  _hover: {
+    textDecoration: 'underline'
+  },
+  _disabled: {
+    opacity: '0.4',
+    pointerEvents: 'none',
+    cursor: 'not-allowed',
+    textDecoration: 'none',
+  }
+}
 
 export const Link = {
   name: 'EverLink',
@@ -22,16 +35,13 @@ export const Link = {
   },
 
   render(h) {
-    const externalAttrs = {
-      target: this.isExternal ? '_blank' : undefined,
-      rel: this.isExternal ? 'nofollow noopener noreferrer' : undefined,
-    }
+    const externalAttrs = this.isExternal ? {
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    } : undefined
 
     const childAttrs = {
-      ...createStyles({
-        ...this.$props,
-        ...this.$evergarden
-      }),
+      ...baseStyles,
       ...externalAttrs,
       'aria-disabled': this.isDisabled,
       as: this.as
