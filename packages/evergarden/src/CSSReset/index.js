@@ -1,4 +1,5 @@
 import { Global, css } from '@evergarden/emotion'
+import { configPreflight } from './preflight'
 
 const defaultConfig = theme => ({
   light: {
@@ -43,7 +44,6 @@ export const CSSReset = {
           border-width: 0;
           border-style: solid;
           border-color: ${borderColor};
-          box-sizing: border-box;
         }
         input:-ms-input-placeholder,
         textarea:-ms-input-placeholder {
@@ -62,7 +62,7 @@ export const CSSReset = {
 
     return h(Global, {
       props: {
-        styles: [configCSS(this.$evergarden)]
+        styles: [configPreflight(), configCSS(this.$evergarden)]
       }
     })
   }
