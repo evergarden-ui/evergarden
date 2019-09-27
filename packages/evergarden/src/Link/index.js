@@ -57,7 +57,7 @@ export const Link = {
       {
         attrs: childAttrs,
         on: {
-          click: this.isDisabled ? e => e.preventDefault() : undefined,
+          ...this.isDisabled && { click: e => e.preventDefault() },
           ...this.$listeners
         }
       },
