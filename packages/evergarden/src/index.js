@@ -12,6 +12,7 @@ export { InputElement } from './InputElement/index'
 export { Icon } from './Icon/index'
 export { Link } from './Link/index'
 export { Text } from './Text/index'
+export { Alert, AlertIcon, AlertTitle, AlertDescription } from './Alert/index'
 
 export { theme }
 

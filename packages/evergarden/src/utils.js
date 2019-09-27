@@ -22,7 +22,7 @@ export const defined = (a, b) => {
   return a === undefined ? b : a
 }
 
-export const mergeAttrs = (base, attrs) => {
+export const mergeAttrs = (base, attrs = {}) => {
   for (const key of Object.keys(attrs)) {
     if (key[0] === '_' && base[key]) {
       merge(base[key], attrs[key])
