@@ -1,6 +1,6 @@
 import { styled } from '@evergarden/emotion'
 import { systemProps, pseudoConfig, pseudoNames } from './config'
-import css from "@styled-system/css";
+import css from '@styled-system/css'
 
 const allPropNames = [
   ...systemProps.propNames,
@@ -20,10 +20,11 @@ const Box = styled('div', { getAttrs })(systemProps, props => {
   for (const key of Object.keys(props)) {
     const trimKey = key.slice(1)
     if (pseudoNames.indexOf(trimKey) > -1) {
-      obj[pseudoConfig[trimKey]] = props[key]
+      obj[pseudoConfig[trimKey]] = systemProps({...props[key], theme: props.theme})
     }
   }
-  return css(obj)
+  console.log(obj)
+  return obj
 })
 
 Box.name = 'EverBox'

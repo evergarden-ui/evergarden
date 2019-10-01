@@ -1,8 +1,8 @@
-import { css } from '@evergarden/emotion'
+import { createGlobalStyle } from '@evergarden/emotion'
 
 // Inspired by https://tailwindcss.com/docs/preflight
 // TODO: use a babel plugin to minimize css in css template tag
-export const configPreflight = () => css`
+export const createPreflight = () => createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
  ========================================================================== */

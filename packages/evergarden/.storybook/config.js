@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { configure, addDecorator } from '@storybook/vue'
-import { Evergarden, CSSReset, Box } from 'evergarden'
+import { Evergarden, Box, CSSReset } from 'evergarden'
 
 Vue.use(Evergarden)
 

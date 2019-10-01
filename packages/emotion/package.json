@@ -15,12 +15,9 @@
     "dist"
   ],
   "dependencies": {
-    "@emotion/cache": "^10.0.19",
-    "@emotion/css": "^10.0.14",
-    "@emotion/serialize": "^0.11.11",
-    "@emotion/sheet": "^0.9.3",
     "@emotion/utils": "^0.11.2",
-    "clsx": "^1.0.4"
+    "@emotion/serialize": "^0.11.11",
+    "@emotion/cache": "^10.0.19"
   },
   "devDependencies": {
     "bili": "^4.8.1"

@@ -1,5 +1,5 @@
-import { Global, css } from '@evergarden/emotion'
-import { configPreflight } from './preflight'
+import { createPreflight } from './preflight'
+import { createThemeReset } from './theme'
 
 const defaultConfig = theme => ({
   light: {
@@ -21,49 +21,21 @@ export const CSSReset = {
     config: Object
   },
 
-  render(h) {
-    const customFunc = this.config || defaultConfig
+  functional: true,
 
-    const configCSS = ({ theme, colorMode }) => {
-      const { color, bg, borderColor, placeholderColor } = customFunc(theme)[
-        colorMode
-      ]
-
-      return css`
-        html {
-          line-height: 1.5;
-          color: ${color};
-          background-color: ${bg};
-        }
-        /**
-        * Allow adding a border to an element by just adding a border-width.
-        */
-        *,
-        *::before,
-        *::after {
-          border-width: 0;
-          border-style: solid;
-          border-color: ${borderColor};
-        }
-        input:-ms-input-placeholder,
-        textarea:-ms-input-placeholder {
-          color: ${placeholderColor};
-        }
-        input::-ms-input-placeholder,
-        textarea::-ms-input-placeholder {
-          color: ${placeholderColor};
-        }
-        input::placeholder,
-        textarea::placeholder {
-          color: ${placeholderColor};
-        }
-      `
+  render(h, { props, parent, children }) {
+    if (process.env.NODE_ENV !== 'production' && children && children.length > 0) {
+      console.error(`The <GlobalStyle> component expect no children elements.`)
     }
 
-    return h(Global, {
-      props: {
-        styles: [configPreflight(), configCSS(this.$evergarden)]
-      }
-    })
+    const { colorMode, theme } = parent.$evergarden
+    const config = props.config ? props.config : defaultConfig(theme)[colorMode]
+    const Preflight = createPreflight()
+    const ThemeReset = createThemeReset(config)
+
+    return [
+      h(Preflight),
+      h(ThemeReset)
+    ]
   }
 }

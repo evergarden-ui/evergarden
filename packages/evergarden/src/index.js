@@ -1,3 +1,4 @@
+import { VueEmotion } from '@evergarden/emotion'
 import { merge } from './utils'
 import { theme } from './theme/index'
 
@@ -17,6 +18,8 @@ export { Alert, AlertIcon, AlertTitle, AlertDescription } from './Alert/index'
 export { theme }
 
 export function Evergarden(Vue) {
+  Vue.use(VueEmotion)
+
   Vue.mixin({
     beforeCreate() {
       if (this.$options.evergarden) {

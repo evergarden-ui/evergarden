@@ -1,4 +1,3 @@
-import { css } from '@evergarden/emotion'
 import Color from 'color'
 
 export const get = (color, hue) => `${color}.${hue}`
@@ -50,19 +49,3 @@ export const colorEmphasis = (color, emphasis) => {
   }
 }
 
-export const generateStripe = ({
-  size = '1rem',
-  color = 'rgba(255, 255, 255, 0.15)'
-}) => css`
-  background-image: linear-gradient(
-    45deg,
-    ${color} 25%,
-    transparent 25%,
-    transparent 50%,
-    ${color} 50%,
-    ${color} 75%,
-    transparent 75%,
-    transparent
-  );
-  background-size: ${size} ${size};
-`
