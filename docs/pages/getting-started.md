@@ -24,7 +24,7 @@ new Vue({
 })
 ```
 
-You also need to add the `CSSReset` component in your `App.vue`:
+You also need to add the `CSSReset` component in your root `App.vue`:
 
 ```vue
 <template>

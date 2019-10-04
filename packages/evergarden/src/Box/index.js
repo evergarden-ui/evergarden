@@ -1,6 +1,5 @@
 import { styled } from '@evergarden/emotion'
 import { systemProps, pseudoConfig, pseudoNames } from './config'
-import css from '@styled-system/css'
 
 const allPropNames = [
   ...systemProps.propNames,
@@ -23,7 +22,6 @@ const Box = styled('div', { getAttrs })(systemProps, props => {
       obj[pseudoConfig[trimKey]] = systemProps({...props[key], theme: props.theme})
     }
   }
-  console.log(obj)
   return obj
 })
 

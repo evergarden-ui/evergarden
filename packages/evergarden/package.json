@@ -10,7 +10,8 @@
     "build-storybook": "build-storybook -o .storybook/dist"
   },
   "files": [
-    "dist"
+    "dist",
+    "/server.js"
   ],
   "dependencies": {
     "@evergarden/emotion": "^0.0.0",

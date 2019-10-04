@@ -1,0 +1,11 @@
+{
+  "name": "saber-theme-everdocs",
+  "version": "0.0.0",
+  "files": ["dist"],
+  "scripts": {
+    "build": "echo TODO"
+  },
+  "dependencies": {
+    "evergarden": "^0.0.0"
+  }
+}
