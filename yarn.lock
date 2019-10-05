@@ -8365,25 +8365,44 @@ rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
+saber-highlight-css@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/saber-highlight-css/-/saber-highlight-css-0.1.1.tgz#fbb45ef69066599a4bb846b4f2311105dcf77be8"
+  integrity sha512-VgpcZef+1v6Pi4NORoEoWPysVelRqgxAm72voA/JQ9zPl4wf/bhYoIGgcn2gLe+vu/GMrUmbQwsXtu6PfbL/Ew==
+
+saber-highlighter-prism@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/saber-highlighter-prism/-/saber-highlighter-prism-0.3.3.tgz#7dd275b7f76fa6d32e0fd2bf8c7c6ce1acb9f6d9"
+  integrity sha512-rG4a+pyVbSrSUW9yNDxsxs7tkfAmzgXxI256DEu5EBNUhATj/9vfDJBMfXEJeIvd85jtDq+WTjPx5ZPlzmT5cA==
+  dependencies:
+    saber-log "^0.3.0"
+
 saber-log@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/saber-log/-/saber-log-0.3.0.tgz#946b5a964e23b73aefe3fd2b86836641d2f1ad23"
   integrity sha512-zXNL8E8bJYznYvZkNKdDyIjcg1jCHbyk17aaPHR315GKK919KGAtr7aAWe6Hj6VfV+yPe/VUFKmru8YjoXJJ1A==
 
-saber-markdown@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/saber-markdown/-/saber-markdown-0.1.4.tgz#f92f481941d62e735f9530dc249b76fa8d7cbed8"
-  integrity sha512-eq/dietVLJv0tsr7uPIimonYVhZ7rLa07A8ggdikp6efsCcyis00xmrTO5zD2dAEb1RkIL+ExAwgZFYj3Hld0w==
+saber-markdown@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/saber-markdown/-/saber-markdown-0.1.5.tgz#94108bf245225c7758ed095cef499467cbfcac7c"
+  integrity sha512-T0Wfe1/COknxZrm9wGhqR+0XG/yt3oOK0uxyLzMZbVG6oDeBqtsHXh7xp6X+RZobd9a75z+Ehv9dpmxrwOZeiQ==
+
+saber-plugin-prismjs@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/saber-plugin-prismjs/-/saber-plugin-prismjs-0.2.3.tgz#9968a8293b5fba8c47929c8ed98d9a5e7e3b0dd6"
+  integrity sha512-1525dcS+WSliUvBUtYmZRxVKReY3GMQJreSH1Jsw/8JPXIwhWaQJenXFsdPWE/XKacfjmVZWtB3Z1bakUKYwuQ==
+  dependencies:
+    saber-highlighter-prism "^0.3.3"
 
 saber-utils@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/saber-utils/-/saber-utils-0.2.3.tgz#8c7afe1e549bc1d2c7b85713ed04d7b19e3b14d8"
   integrity sha512-dACcr0CS+Cim/yBZF7QeDJb2bLGzWrWLisA7puBYfmZdQj9HrjMEPdKYk8VGMLaHmsGLf8bHMhotIhWuePrPkA==
 
-saber@^0.10.2:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/saber/-/saber-0.10.2.tgz#2efa27620f68dbb5ea911f7fc4bd3aee5eef733c"
-  integrity sha512-tiDZWyXOiWUasdkCzxPnxPH92iRciax7s2575QuSHgr7KBn+Qr7IxES5/oQtx0IZ69+X/7HNL0oxFPQZK+IwyQ==
+saber@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/saber/-/saber-0.10.3.tgz#3e73ba8bc8284de1bc78f4f7d9cc308adff13074"
+  integrity sha512-VTA7HBP/R2oAWgQjapVlCKSlnjUS2bA7sj5JulqfoqITplDe6K/p798pZ+E3DR+54NJu5N4fj4NptpqlO6Q43w==
   dependencies:
     "@babel/core" "^7.5.4"
     "@babel/plugin-proposal-object-rest-spread" "^7.5.4"
@@ -8417,7 +8436,7 @@ saber@^0.10.2:
     pretty-ms "^5.0.0"
     resolve-from "^5.0.0"
     saber-log "^0.3.0"
-    saber-markdown "^0.1.4"
+    saber-markdown "^0.1.5"
     saber-utils "^0.2.3"
     serve-static "^1.13.2"
     slugo "^0.3.1"
@@ -9630,6 +9649,13 @@ vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
+
+vue-bytesize-icons@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vue-bytesize-icons/-/vue-bytesize-icons-0.1.1.tgz#0308e01d0a23d181f0228b223c44134b8e722a61"
+  integrity sha512-yiC79jqopk0RBbawIPPlqjGfI9NH1Kb1Vt2kaG4AhFtvDEYF9i738m87HbH+NlsVNtqb60j5j5IjMskpT7C9RA==
+  dependencies:
+    babel-helper-vue-jsx-merge-props "^2.0.2"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

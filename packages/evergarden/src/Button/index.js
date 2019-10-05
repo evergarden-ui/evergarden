@@ -20,10 +20,6 @@ export const Button = {
       type: [String, Number],
       default: 'md'
     },
-    as: {
-      type: String,
-      default: 'button'
-    },
     isDisabled: {
       type: Boolean
     }
@@ -38,8 +34,7 @@ export const Button = {
         ...this.$evergarden
       }),
       disabled: this.isDisabled,
-      'aria-disabled': this.isDisabled,
-      as: this.as
+      'aria-disabled': this.isDisabled
     }
     mergeAttrs(childAttrs, this.$attrs)
     return h(

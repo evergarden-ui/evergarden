@@ -9,6 +9,6 @@
     "storybook": "yarn workspace evergarden run storybook"
   },
   "devDependencies": {
-    "saber": "^0.10.2"
+    "saber": "^0.10.3"
   }
 }

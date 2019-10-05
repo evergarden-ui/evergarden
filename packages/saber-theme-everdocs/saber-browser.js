@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import * as Evergarden from 'evergarden'
+import 'saber-highlight-css/default.css'
+import './css/prism.css'
+import './css/global.css'
 
 Vue.use(Evergarden.Evergarden)
 

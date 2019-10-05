@@ -9,3 +9,11 @@ exports.getDocumentData = (documentData, { app, markup }) => {
   )}">${css}</style>${documentData.style}`
   return documentData
 }
+
+exports.filterPlugins = plugins => {
+  return plugins.concat([
+    {
+      ...require('saber-plugin-prismjs')
+    }
+  ])
+}

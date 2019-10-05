@@ -1,11 +1,16 @@
 {
   "name": "saber-theme-everdocs",
   "version": "0.0.0",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "echo TODO"
   },
   "dependencies": {
-    "evergarden": "^0.0.0"
+    "evergarden": "^0.0.0",
+    "saber-highlight-css": "^0.1.1",
+    "saber-plugin-prismjs": "^0.2.3",
+    "vue-bytesize-icons": "^0.1.1"
   }
 }
