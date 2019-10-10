@@ -17,13 +17,14 @@ yarn storybook
 ## Folder Structure
 
 ```bash
+- docs/                       # WIP docs website
 - packages/
   - evergarden/
     - src/
       - Button/
-        - examples.js  # Storybook examples
-        - index.js     # Component entry
-        - styles.js    # Component styles, if any
+        - examples.js         # Storybook examples
+        - index.js            # Component entry
+        - styles.js           # Component styles, if any
       - ...
-  - emotion/           # https://emotion.sh for Vue.js
+  - saber-theme-everdocs/     # Used by the docs website
 ```
