@@ -6,7 +6,7 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs'
 
 addDecorator(withKnobs)
 
-const variants = {
+const variantColors = {
   label: 'Variants',
   options: ['green', 'red', 'cyan', 'orange', 'blue'],
   defaultValue: 'green'
@@ -20,11 +20,14 @@ const sizes = {
 
 export default { title: 'Button' }
 
-export const button = () => ({
-  components: { Button },
+export const basic = () => ({
   props: {
-    variant: {
-      default: select(variants.label, variants.options, variants.defaultValue)
+    variantColor: {
+      default: select(
+        variantColors.label,
+        variantColors.options,
+        variantColors.defaultValue
+      )
     },
     size: {
       default: select(sizes.label, sizes.options, sizes.defaultValue)
@@ -36,13 +39,17 @@ export const button = () => ({
       default: boolean('Disabled', false)
     }
   },
-  template: `
-  <Button
-    :variantColor="variant"
-    :size="size"
-    :isDisabled="disabled"
-    onClick={action('hello')
-  >
-    {{ text }}
-  </Button>`
+
+  render(h) {
+    return (
+      <Button
+        variantColor={this.variantColor}
+        size={this.size}
+        isDisabled={this.disabled}
+        onClick={action('hello')}
+      >
+        {this.text}
+      </Button>
+    )
+  }
 })
