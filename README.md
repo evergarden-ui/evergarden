@@ -5,7 +5,7 @@ A design system for Vue.js.
 ## Features/Goals
 
 - **Out-of-the-box**: Evergarden contains a set of polished Vue components that work out of the box.
-- **Themeable**: Quickly and easily reference values from your theme throughout your entire application, on any component. Evergarden also comes with a dark theme by default!
+- **Themeable**: Quickly and easily reference values from your [theme](https://styled-system.com/theme-specification) throughout your entire application, on any component. Evergarden also comes with a dark theme by default!
 - **Customizable**: All Vue components provided by Evergarden can be easily customizable via [style props](https://styled-system.com/getting-started/).
 - **Accessibiliy**: Our goal is to strictly follow [WAI-ARIA 1.1](https://www.w3.org/TR/wai-aria/) standards.
 
