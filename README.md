@@ -6,8 +6,8 @@ A design system for Vue.js.
 
 ## Prior art
 
-Evergarden is heavily inspired by [Chakra UI](https://chakra-ui.com/).
+Evergarden is heavily inspired by [Theme UI](https://theme-ui.com/), [Chakra UI](https://chakra-ui.com/) and [TailwindCSS](https://tailwindcss.com/).
 
 ## License
 
-MIT.
+MIT &copy; [Freefolk](https://github.com/freefolk).
