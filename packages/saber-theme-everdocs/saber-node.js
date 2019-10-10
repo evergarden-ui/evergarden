@@ -1,12 +1,9 @@
-const { createEmotionRenderer } = require('evergarden/server')
+const { renderStyle } = require('evergarden/server')
 
 exports.getDocumentData = (documentData, { app, markup }) => {
   const cache = app.$emotionCache
-  const cssRenderer = createEmotionRenderer(cache)
-  const { css, ids } = cssRenderer.extractCritical(markup)
-  documentData.style = `<style data-emotion-${cache.key}="${ids.join(
-    ' '
-  )}">${css}</style>${documentData.style}`
+  const style = renderStyle(cache, markup)
+  documentData.style = `${style}${documentData.style}`
   return documentData
 }
 

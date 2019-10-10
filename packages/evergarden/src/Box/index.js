@@ -1,4 +1,4 @@
-import { styled } from '@evergarden/emotion'
+import { styled } from '@egoist/vue-emotion'
 import { systemProps, pseudoConfig, pseudoNames } from './config'
 
 const allPropNames = [

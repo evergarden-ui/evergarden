@@ -1,2 +1,2 @@
-// Re-export from @evergarden/emotion
-module.exports = require('@evergarden/emotion/server')
+// Re-export from @egoist/vue-emotion
+module.exports = require('@egoist/vue-emotion/server')

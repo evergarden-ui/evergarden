@@ -1,4 +1,4 @@
-import { createGlobalStyle } from '@evergarden/emotion'
+import { createGlobalStyle } from '@egoist/vue-emotion'
 
 // Inspired by https://tailwindcss.com/docs/preflight
 // TODO: use a babel plugin to minimize css in css template tag

@@ -1,4 +1,4 @@
-import { VueEmotion } from '@evergarden/emotion'
+import { VueEmotion } from '@egoist/vue-emotion'
 import { merge } from './utils'
 import { theme } from './theme/index'
 

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from '@evergarden/emotion'
+import { createGlobalStyle } from '@egoist/vue-emotion'
 
 export const createThemeReset = ({
   color,

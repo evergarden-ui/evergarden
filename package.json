@@ -5,10 +5,11 @@
     "packages/*"
   ],
   "scripts": {
+    "docs": "saber docs",
     "prepare": "yarn workspaces run build",
     "storybook": "yarn workspace evergarden run storybook"
   },
   "devDependencies": {
-    "saber": "^0.10.3"
+    "saber": "^0.10.4"
   }
 }

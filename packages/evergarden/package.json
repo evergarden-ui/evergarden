@@ -14,7 +14,7 @@
     "/server.js"
   ],
   "dependencies": {
-    "@evergarden/emotion": "^0.0.0",
+    "@egoist/vue-emotion": "^0.6.0",
     "color": "^3.1.2",
     "styled-system": "^5.1.2"
   },
