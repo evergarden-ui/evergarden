@@ -1,5 +1,7 @@
 # Evergarden
 
+![status](https://badgen.net/badge/status/experimental/cyan)
+
 A design system for Vue.js.
 
 ## Prior art
