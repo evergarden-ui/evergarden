@@ -50,6 +50,10 @@ export const Link = {
       as: this.as
     }
 
+    if (this.as !== 'a') {
+      childAttrs.role = 'link'
+    }
+
     mergeAttrs(childAttrs, this.$attrs)
 
     return h(

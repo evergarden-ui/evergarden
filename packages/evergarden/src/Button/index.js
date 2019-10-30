@@ -8,6 +8,14 @@ export const Button = {
   inheritAttrs: false,
 
   props: {
+    as: {
+      type: String,
+      default: 'button'
+    },
+    type: {
+      type: String,
+      default: 'button'
+    },
     variant: {
       type: String,
       default: 'solid'
@@ -33,10 +41,19 @@ export const Button = {
         size: this.size,
         ...this.$evergarden
       }),
+      as: this.as,
       disabled: this.isDisabled,
       'aria-disabled': this.isDisabled
     }
+
+    if (this.as === 'button') {
+      childAttrs.type = this.type
+    } else {
+      childAttrs.role = 'button'
+    }
+
     mergeAttrs(childAttrs, this.$attrs)
+
     return h(
       Box,
       {
