@@ -133,7 +133,8 @@ const config = {
   objectPosition: true,
   backgroundAttachment: true,
   outline: true,
-  float: true
+  float: true,
+  clip: true
 }
 
 config.bgAttachment = config.backgroundAttachment
@@ -159,6 +160,7 @@ export const pseudoConfig = {
   hover: '&:hover',
   active: '&:active, &[data-active=true]',
   focus: '&:focus',
+  groupFocusWithin: '[role=group]:focus-within &',
   visited: '&:visited',
   even: '&:nth-of-type(even)',
   odd: '&:nth-of-type(odd)',
