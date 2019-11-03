@@ -1,6 +1,6 @@
 import { Input, Stack } from 'evergarden'
 
-export default { title: 'Input' }
+export default { title: 'Input', component: Input }
 
 export const sizes = () => ({
   render(h) {

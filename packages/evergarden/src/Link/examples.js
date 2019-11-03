@@ -1,6 +1,6 @@
 import { Link, Stack } from 'evergarden'
 
-export default { title: 'Link' }
+export default { title: 'Link', component: Link }
 
 export const basic = () => ({
   render(h) {

@@ -1,6 +1,6 @@
 import { InputGroup, Input, InputElement, Button } from 'evergarden'
 
-export default { title: 'InputGroup' }
+export default { title: 'InputGroup', component: InputGroup }
 
 export const basic = () => ({
   components: {

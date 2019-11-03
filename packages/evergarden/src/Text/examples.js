@@ -1,6 +1,6 @@
 import { Stack, Text } from 'evergarden'
 
-export default {title: 'Text'}
+export default { title: 'Text', component: Text }
 
 export const basic = () => ({
   render(h) {
