@@ -11,10 +11,19 @@ module.exports = ({ config }) => {
           u.options.presets = u.options.presets.filter(preset => {
             return !preset.includes('babel-preset-vue')
           })
-          u.options.plugins.push(require.resolve('babel-plugin-transform-vue-jsx'))
+          u.options.plugins.push(
+            require.resolve('babel-plugin-transform-vue-jsx')
+          )
         }
       })
     }
+  })
+
+  config.module.rules.push({
+    test: /examples.[tj]sx?$/,
+    loader: require.resolve('@storybook/source-loader'),
+    options: { inspectLocalDependencies: true },
+    enforce: 'pre'
   })
 
   return config
