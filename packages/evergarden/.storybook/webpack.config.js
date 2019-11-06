@@ -26,5 +26,13 @@ module.exports = ({ config }) => {
     enforce: 'pre'
   })
 
+  config.module.rules.push({
+    test: /index.[tj]sx?$/,
+    include: path.join(__dirname, '../src'),
+    exclude: /theme/,
+    loader: 'storybook-addon-vue-info/loader',
+    enforce: 'post'
+  })
+
   return config
 }
