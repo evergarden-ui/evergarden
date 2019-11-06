@@ -64,3 +64,4 @@ export const Button = {
     )
   }
 }
+const component = { options: Button }

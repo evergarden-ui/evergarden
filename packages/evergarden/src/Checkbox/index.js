@@ -25,7 +25,7 @@ export const Checkbox = {
       default: 'gray'
     },
     isChecked: {
-      type: Boolean,
+      type: Boolean
     },
     isDisabled: {
       type: Boolean
@@ -48,7 +48,7 @@ export const Checkbox = {
       as: this.as,
       disabled: this.isDisabled,
       'aria-disabled': this.isDisabled,
-      'aria-checked': this.isIndeterminate ? 'mixed' : this.isChecked,
+      'aria-checked': this.isIndeterminate ? 'mixed' : this.isChecked
     }
 
     if (isInput) {
@@ -94,9 +94,7 @@ export const Checkbox = {
             )
           ]
         )
-      : h(
-        ...checkboxElement,
-        this.$slots.default
-      )
+      : h(...checkboxElement, this.$slots.default)
   }
 }
+const component = { options: Checkbox }

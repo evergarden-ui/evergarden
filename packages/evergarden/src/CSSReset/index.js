@@ -24,7 +24,11 @@ export const CSSReset = {
   functional: true,
 
   render(h, { props, parent, children }) {
-    if (process.env.NODE_ENV !== 'production' && children && children.length > 0) {
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      children &&
+      children.length > 0
+    ) {
       console.error(`The <GlobalStyle> component expect no children elements.`)
     }
 
@@ -33,9 +37,7 @@ export const CSSReset = {
     const Preflight = createPreflight()
     const ThemeReset = createThemeReset(config)
 
-    return [
-      h(Preflight),
-      h(ThemeReset)
-    ]
+    return [h(Preflight), h(ThemeReset)]
   }
 }
+const component = { options: CSSReset }

@@ -51,3 +51,4 @@ export const InputGroup = {
     )
   }
 }
+const component = { options: InputGroup }

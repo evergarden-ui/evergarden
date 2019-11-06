@@ -5,10 +5,10 @@ import { mergeAttrs } from '../utils'
 export { AlertIcon, AlertTitle, AlertDescription } from './components'
 
 export const statuses = {
-  info: { icon: "info", color: "blue" },
-  warning: { icon: "warning-2", color: "orange" },
-  success: { icon: "check-circle", color: "green" },
-  error: { icon: "warning", color: "red" },
+  info: { icon: 'info', color: 'blue' },
+  warning: { icon: 'warning-2', color: 'orange' },
+  success: { icon: 'check-circle', color: 'green' },
+  error: { icon: 'warning', color: 'red' }
 }
 
 export const Alert = {
@@ -27,7 +27,7 @@ export const Alert = {
     }
   },
 
-  provide () {
+  provide() {
     return {
       alertContext: this.$props
     }
@@ -40,7 +40,7 @@ export const Alert = {
       role: 'alert',
       ...createAlertStyles({
         variant,
-        color: statuses[status] && statuses[status]["color"],
+        color: statuses[status] && statuses[status]['color'],
         ...this.$evergarden
       })
     }
@@ -57,3 +57,5 @@ export const Alert = {
     )
   }
 }
+
+const component = { options: Alert }

@@ -63,3 +63,4 @@ export const ButtonGroup = {
     )
   }
 }
+const component = { options: ButtonGroup }

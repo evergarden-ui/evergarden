@@ -1,7 +1,12 @@
 import { Box } from '../Box/index'
 import { Checkbox } from '../Checkbox/index'
 import { mergeAttrs } from '../utils'
-import { checkboxStyle, createTrackStyle, createThumbStyle, createStyle } from './styles'
+import {
+  checkboxStyle,
+  createTrackStyle,
+  createThumbStyle,
+  createStyle
+} from './styles'
 
 export const Switch = {
   name: 'EveSwitch',
@@ -33,32 +38,29 @@ export const Switch = {
 
     const childAttrs = {
       as: 'label',
-      role: 'group',
+      role: 'group'
     }
 
     mergeAttrs(childAttrs, this.$attrs)
-  
+
     return h(
       Box,
       {
         attrs: {
           ...childAttrs,
           ...createStyle(props)
-        },
+        }
       },
       [
-        h(
-          Checkbox,
-          {
-            attrs: {
-              isChecked: this.isChecked,
-              isDisabled: this.isDisabled,
-              variant: 'unstyled',
-              ...checkboxStyle
-            },
-            on: this.$listeners
-          }
-        ),
+        h(Checkbox, {
+          attrs: {
+            isChecked: this.isChecked,
+            isDisabled: this.isDisabled,
+            variant: 'unstyled',
+            ...checkboxStyle
+          },
+          on: this.$listeners
+        }),
         h(
           Box,
           {
@@ -68,17 +70,15 @@ export const Switch = {
             }
           },
           [
-            h(
-              Box,
-              {
-                attrs: {
-                  ...createThumbStyle(props)
-                }
+            h(Box, {
+              attrs: {
+                ...createThumbStyle(props)
               }
-            )
+            })
           ]
         )
       ]
     )
   }
 }
+const component = { options: Switch }

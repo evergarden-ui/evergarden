@@ -3,7 +3,7 @@ import { getChildren, merge } from '../utils'
 
 export const Stack = {
   name: 'EverStack',
-  
+
   props: {
     isInline: {
       type: Boolean
@@ -33,9 +33,10 @@ export const Stack = {
         const spacingProps = this.isInline
           ? { mr: isLast ? undefined : this.spacing }
           : { mb: isLast ? undefined : this.spacing }
-         child.data.attrs = merge({}, child.data.attrs, spacingProps)
+        child.data.attrs = merge({}, child.data.attrs, spacingProps)
         return child
       })
     )
   }
 }
+const component = { options: Stack }

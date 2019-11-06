@@ -58,3 +58,4 @@ export const IconButton = {
     )
   }
 }
+const component = { options: IconButton }

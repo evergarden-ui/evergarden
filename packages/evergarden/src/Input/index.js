@@ -73,3 +73,4 @@ export const Input = {
     )
   }
 }
+const component = { options: Input }
