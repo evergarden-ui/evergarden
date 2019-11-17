@@ -30,7 +30,7 @@ module.exports = ({ config }) => {
     test: /index.[tj]sx?$/,
     include: path.join(__dirname, '../src'),
     exclude: /theme/,
-    loader: 'storybook-addon-vue-info/loader',
+    loader: 'vue-docgen-loader',
     enforce: 'post'
   })
 
