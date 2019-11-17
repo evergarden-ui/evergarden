@@ -17,13 +17,19 @@ export const Alert = {
   inheritAttrs: false,
 
   props: {
-    variant: {
-      type: String,
-      default: 'subtle'
-    },
+    /**
+     * The primary status of the alert.
+     */
     status: {
       type: String,
       default: 'info'
+    },
+    /**
+     * Style variants on the primary status.
+     */
+    variant: {
+      type: String,
+      default: 'subtle'
     }
   },
 

@@ -1,6 +1,12 @@
 import { Button, ButtonGroup } from 'evergarden'
 
-export default { title: 'ButtonGroup', component: ButtonGroup }
+export default {
+  title: 'ButtonGroup',
+  component: ButtonGroup,
+  parameters: {
+    componentSubtitle: 'Group buttons in style'
+  }
+}
 
 export const basic = () => ({
   render(h) {

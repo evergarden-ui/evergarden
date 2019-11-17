@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import { Stack, Switch as EveSwitch } from 'evergarden'
 
-export default { title: 'Switch', component: EveSwitch }
+export default {
+  title: 'Switch',
+  component: EveSwitch,
+  parameters: {
+    componentSubtitle: 'Basic toggle'
+  }
+}
 
 export const Sizes = () => ({
   data: () => ({
