@@ -5,7 +5,8 @@ export default {
   title: 'Alert',
   component: Alert,
   parameters: {
-    componentSubtitle: 'Simple status banner'
+    componentSubtitle: 'Simple status banner',
+    subcomponents: { AlertIcon, AlertTitle, AlertDescription }
   }
 }
 

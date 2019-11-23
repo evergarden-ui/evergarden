@@ -4,7 +4,8 @@ export default {
   title: 'InputGroup',
   component: InputGroup,
   parameters: {
-    componentSubtitle: 'Form organization'
+    componentSubtitle: 'Form organization',
+    subcomponents: { Input, InputElement }
   }
 }
 

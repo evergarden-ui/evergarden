@@ -4,7 +4,8 @@ export default {
   title: 'ButtonGroup',
   component: ButtonGroup,
   parameters: {
-    componentSubtitle: 'Group buttons in style'
+    componentSubtitle: 'Group buttons in style',
+    subcomponents: { Button }
   }
 }
 
