@@ -6,7 +6,7 @@ module.exports = ({ config }) => {
   config.module.rules.forEach(rule => {
     if (rule.test.test('.js')) {
       rule.use.forEach(u => {
-        if (u.loader === 'babel-loader') {
+        if (u.loader === 'babel-loader' && u.options.plugins) {
           u.options.babelrc = false
           u.options.presets = u.options.presets.filter(preset => {
             return !preset.includes('babel-preset-vue')
