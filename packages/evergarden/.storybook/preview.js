@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { configure, addDecorator } from '@storybook/vue'
+import { addDecorator, addParameters } from '@storybook/vue'
 import { Evergarden, Box, CSSReset } from 'evergarden'
 
 Vue.use(Evergarden)
@@ -10,4 +10,8 @@ addDecorator(p => ({
   }
 }))
 
-configure(require.context('../src', true, /examples\.js$/), module)
+addParameters({
+  docs: {
+    inlineStories: true
+  }
+})

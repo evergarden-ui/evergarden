@@ -61,7 +61,7 @@ export const Link = {
       {
         attrs: childAttrs,
         on: {
-          ...this.isDisabled && { click: e => e.preventDefault() },
+          ...(this.isDisabled && { click: e => e.preventDefault() }),
           ...this.$listeners
         }
       },
@@ -69,3 +69,4 @@ export const Link = {
     )
   }
 }
+const component = { options: Link }

@@ -1,6 +1,13 @@
 import { InputGroup, Input, InputElement, Button } from 'evergarden'
 
-export default { title: 'InputGroup' }
+export default {
+  title: 'InputGroup',
+  component: InputGroup,
+  parameters: {
+    componentSubtitle: 'Form organization',
+    subcomponents: { Input, InputElement }
+  }
+}
 
 export const basic = () => ({
   components: {

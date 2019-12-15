@@ -1,10 +1,9 @@
 import { Box } from '../Box/index'
-import { inputSizes } from "../Input/styles";
-
+import { inputSizes } from '../Input/styles'
 
 export const InputElement = {
   name: 'EverInputElement',
-  
+
   props: {
     placement: {
       type: String,
@@ -22,8 +21,8 @@ export const InputElement = {
   inheritAttrs: false,
 
   render(h) {
-    const height = inputSizes[this.size] && inputSizes[this.size]["height"];
-    const fontSize = inputSizes[this.size] && inputSizes[this.size]["fontSize"];
+    const height = inputSizes[this.size] && inputSizes[this.size]['height']
+    const fontSize = inputSizes[this.size] && inputSizes[this.size]['fontSize']
 
     return h(
       Box,
@@ -39,7 +38,7 @@ export const InputElement = {
           width: height,
           fontSize,
           ...(this.disablePointerEvents && { pointerEvents: 'none' }),
-          ...({ [this.placement]: "0" }),
+          ...{ [this.placement]: '0' },
           ...this.$attrs
         }
       },
@@ -47,3 +46,4 @@ export const InputElement = {
     )
   }
 }
+const component = { options: InputElement }

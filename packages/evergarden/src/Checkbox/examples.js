@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import { Stack, Checkbox } from 'evergarden'
 
-export default { title: 'Checkbox' }
+export default {
+  title: 'Checkbox',
+  component: Checkbox,
+  parameters: {
+    componentSubtitle: 'Yes, no, or maybe'
+  }
+}
 
 export const Sizes = () => ({
   data: () => {

@@ -6,12 +6,17 @@ export const Text = {
   inheritAttrs: false,
 
   render(h) {
-    return h(Box, {
-      attrs: {
-        as: 'p',
-        ...this.$attrs,
+    return h(
+      Box,
+      {
+        attrs: {
+          as: 'p',
+          ...this.$attrs
+        },
+        on: this.$listeners
       },
-      on: this.$listeners
-    }, this.$slots.default)
+      this.$slots.default
+    )
   }
 }
+const component = { options: Text }

@@ -1,7 +1,14 @@
 import { Box, Alert, AlertIcon, AlertTitle, AlertDescription } from 'evergarden'
 import { action } from '@storybook/addon-actions'
 
-export default { title: 'Alert' }
+export default {
+  title: 'Alert',
+  component: Alert,
+  parameters: {
+    componentSubtitle: 'Simple status banner',
+    subcomponents: { AlertIcon, AlertTitle, AlertDescription }
+  }
+}
 
 export const defaults = () => ({
   render() {

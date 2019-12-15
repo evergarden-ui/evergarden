@@ -19,7 +19,10 @@ const Box = styled('div', { getAttrs })(systemProps, props => {
   for (const key of Object.keys(props)) {
     const trimKey = key.slice(1)
     if (pseudoNames.indexOf(trimKey) > -1) {
-      obj[pseudoConfig[trimKey]] = systemProps({...props[key], theme: props.theme})
+      obj[pseudoConfig[trimKey]] = systemProps({
+        ...props[key],
+        theme: props.theme
+      })
     }
   }
   return obj
@@ -28,3 +31,4 @@ const Box = styled('div', { getAttrs })(systemProps, props => {
 Box.name = 'EverBox'
 
 export { Box }
+const component = { options: Box }

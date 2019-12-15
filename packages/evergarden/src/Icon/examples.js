@@ -1,6 +1,12 @@
 import { Box, Icon } from 'evergarden'
 
-export default { title: 'Icons' }
+export default {
+  title: 'Icons',
+  component: Icon,
+  parameters: {
+    componentSubtitle: 'Utility icons'
+  }
+}
 
 export const basic = () => ({
   render(h) {

@@ -5,29 +5,35 @@ import { mergeAttrs } from '../utils'
 export { AlertIcon, AlertTitle, AlertDescription } from './components'
 
 export const statuses = {
-  info: { icon: "info", color: "blue" },
-  warning: { icon: "warning-2", color: "orange" },
-  success: { icon: "check-circle", color: "green" },
-  error: { icon: "warning", color: "red" },
+  info: { icon: 'info', color: 'blue' },
+  warning: { icon: 'warning-2', color: 'orange' },
+  success: { icon: 'check-circle', color: 'green' },
+  error: { icon: 'warning', color: 'red' }
 }
 
 export const Alert = {
-  name: 'EverAlert',
+  name: 'Alert',
 
   inheritAttrs: false,
 
   props: {
-    variant: {
-      type: String,
-      default: 'subtle'
-    },
+    /**
+     * The primary status of the alert.
+     */
     status: {
       type: String,
       default: 'info'
+    },
+    /**
+     * Style variants on the primary status.
+     */
+    variant: {
+      type: String,
+      default: 'subtle'
     }
   },
 
-  provide () {
+  provide() {
     return {
       alertContext: this.$props
     }
@@ -40,7 +46,7 @@ export const Alert = {
       role: 'alert',
       ...createAlertStyles({
         variant,
-        color: statuses[status] && statuses[status]["color"],
+        color: statuses[status] && statuses[status]['color'],
         ...this.$evergarden
       })
     }
@@ -57,3 +63,5 @@ export const Alert = {
     )
   }
 }
+
+const component = { options: Alert }

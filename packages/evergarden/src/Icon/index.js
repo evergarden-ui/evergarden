@@ -37,3 +37,4 @@ export const Icon = {
     )
   }
 }
+const component = { options: Icon }

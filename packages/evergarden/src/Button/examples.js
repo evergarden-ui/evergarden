@@ -18,7 +18,13 @@ const sizes = {
   defaultValue: 'md'
 }
 
-export default { title: 'Button' }
+export default {
+  title: 'Button',
+  component: Button,
+  parameters: {
+    componentSubtitle: 'Basic button'
+  }
+}
 
 export const basic = () => ({
   props: {
