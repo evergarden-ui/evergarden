@@ -12,7 +12,7 @@ export const statuses = {
 }
 
 export const Alert = {
-  name: 'EverAlert',
+  name: 'Alert',
 
   inheritAttrs: false,
 
