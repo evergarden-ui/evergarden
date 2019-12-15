@@ -27,7 +27,7 @@ module.exports = ({ config }) => {
   })
 
   config.module.rules.push({
-    test: /index.[tj]sx?$/,
+    test: /(components|index).[tj]sx?$/,
     include: path.join(__dirname, '../src'),
     exclude: /theme/,
     loader: 'vue-docgen-loader',

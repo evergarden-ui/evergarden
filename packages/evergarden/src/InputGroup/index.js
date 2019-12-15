@@ -3,6 +3,8 @@ import { getChildren, merge, defined } from '../utils'
 import { inputSizes } from '../Input/styles'
 
 export const InputGroup = {
+  name: 'InputGroup',
+
   props: {
     size: {
       type: String,
